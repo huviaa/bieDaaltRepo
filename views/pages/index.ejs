@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="home-page-1">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+    <!-- Start Main content -->
+    <main>
+        
+        <section class="featured-slider-1 pt-65 pb-65">
+            <div class="position-relative">
+                <div class="featured-slider-1-arrow color-white"></div>
+                <div class="container">
+                    <div class="hero-1 featured-slider-1-items mb-65">
+                        <% for(var j = 0; j < news.length; j++) { %>
+                        <div class="slider-single">
+                            <div class="row">
+                                <div class="col-lg-6 align-self-center">
+                                    <div class="post-meta-1 mb-20">
+                                        <span class="post-date text-muted font-md"><%= news[j].post_created_date %></span>
+                                    </div>
+                                    <h2 class="post-title mb-30">
+                                        <a href="/single/<%= news[j].id %>">
+                                            <%= news[j].post_title %>
+                                        </a>
+                                    </h2>
+                                    <div class="post-excerpt text-grey-400 mb-30">
+                                        Tempus ultricies augue luctus et ut suscipit. Morbi arcu, ultrices purus dolor erat bibendum sapien metus. Sit mi, pharetra, morbi arcu id. Pellentesque dapibus nibh augue senectus.
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <img class="border-radius-10" src="/imgs/uploaded_images/<%= news[j].post_image %>" alt="flow">
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                        <!-- <div class="slider-single">
+                            <div class="row">
+                                <div class="col-lg-6 align-self-center">
+                                    <div class="post-meta-1 mb-20">
+                                        <a href="category.html" class="tag-category bg-primary shadown-1 text-dark button-shadow hover-up-3">Design</a>
+                                        <span class="post-date text-muted font-md">September 22, 2021</span>
+                                    </div>
+                                    <h2 class="post-title mb-30">
+                                        <a href="/single">
+                                            9 Things I Love About Shaving My Head During Quarantine
+                                        </a>
+                                    </h2>
+                                    <div class="post-excerpt text-grey-400 mb-30">
+                                        Sit nemore imperdiet elaboraret eu, commune inciderint mei no. Ex usu ignota eripuit oportere. Vis at choro oratio, vitae quodsi ei sit. Mei ne habeo legimus qualisque.
+                                    </div>
+                                    <div class="post-meta-2 font-md d-flext align-self-center mb-md-30">
+                                        <a href="page-author.html">
+                                            <img src="/imgs/authors/author-3.jpg" alt="">
+                                            <span class="author-namge">Angela</span>
+                                        </a>
+                                        <span class="time-to-read has-dot">9 mins to read</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <img class="border-radius-10" src="/imgs/news/thumb-11.jpg" alt="flow">
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="slider-single">
+                            <div class="row">
+                                <div class="col-lg-6 align-self-center">
+                                    <div class="post-meta-1 mb-20">
+                                        <a href="category.html" class="tag-category bg-danger shadown-1 text-dark button-shadow hover-up-3">Audition</a>
+                                        <span class="post-date text-muted font-md">September 25, 2021</span>
+                                    </div>
+                                    <h2 class="post-title mb-30">
+                                        <a href="/single">
+                                            Essential Qualities of Highly Successful Music in this year
+                                        </a>
+                                    </h2>
+                                    <div class="post-excerpt text-grey-400 mb-30">
+                                        Maluisset patrioque his no, pro ex tempor vivendo deleniti. Reque dignissim his in, vix te summo maluisset assueverit, et vidisse luptatum accusata eos. Ad vix diam accumsan.
+                                    </div>
+                                    <div class="post-meta-2 font-md d-flext align-self-center mb-md-30">
+                                        <a href="page-author.html">
+                                            <img src="/imgs/authors/author-4.jpg" alt="">
+                                            <span class="author-namge">Sophie</span>
+                                        </a>
+                                        <span class="time-to-read has-dot">7 mins to read</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <img class="border-radius-10" src="/imgs/news/thumb-12.jpg" alt="flow">
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="slider-single">
+                            <div class="row">
+                                <div class="col-lg-6 align-self-center">
+                                    <div class="post-meta-1 mb-20">
+                                        <a href="category.html" class="tag-category bg-success shadown-1 text-dark button-shadow hover-up-3">Healthy</a>
+                                        <span class="post-date text-muted font-md">August 12, 2021</span>
+                                    </div>
+                                    <h2 class="post-title mb-30">
+                                        <a href="/single">
+                                            Why We Need to Stop Talking About Food and Guilt
+                                        </a>
+                                    </h2>
+                                    <div class="post-excerpt text-grey-400 mb-30">
+                                        Quo ex aeterno luptatum mnesarchum, an duis veri harum eam, mel ex diceret dolorum. Sed no causae dissentias, quo cu ridens gubergren voluptatibus.
+                                    </div>
+                                    <div class="post-meta-2 font-md d-flext align-self-center mb-md-30">
+                                        <a href="page-author.html">
+                                            <img src="/imgs/authors/author-2.jpg" alt="">
+                                            <span class="author-namge">John Lennon</span>
+                                        </a>
+                                        <span class="time-to-read has-dot">16 mins to read</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <img class="border-radius-10" src="/imgs/news/thumb-13.jpg" alt="flow">
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="featured-slider-1-nav row">
+                    <% for(var k = 0; k < news.length; k++) { %>
+                    <div class="col d-flex transition-normal latest-small-thumb">
+                        <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                            <a class="color-white" href="/single/<%= news[k].id %>">
+                                <img src="/imgs/uploaded_images/<%= news[k].post_image %>" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content media-body align-self-center">
+                            <h5 class="post-title mb-15 text-limit-2-row font-medium">
+                                <a href="/single/<%= news[k].id %>">
+                                    <%= news[k].post_title %>
+                                </a>
+                            </h5>
+                            <div class="entry-meta meta-1 float-left font-sm">
+                                <span class="post-on"><%= news[k].post_created_date %></span>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                    <!-- <div class="col d-flex transition-normal latest-small-thumb">
+                        <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                            <a class="color-white" href="/single">
+                                <img src="/imgs/news/thumb-11.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content media-body align-self-center">
+                            <h5 class="post-title mb-15 text-limit-2-row font-medium">
+                                <a href="/single">9 Things I Love About Shaving My Head During Quarantine</a>
+                            </h5>
+                            <div class="entry-meta meta-1 float-left font-sm">
+                                <span class="post-on">Sep 15, 2021</span>
+                                <span class="post-by has-dot">13k views</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex transition-normal latest-small-thumb">
+                        <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                            <a class="color-white" href="/single">
+                                <img src="/imgs/news/thumb-12.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content media-body align-self-center">
+                            <h5 class="post-title mb-15 text-limit-2-row font-medium">
+                                <a href="/single">Essential Qualities of Highly Successful Music in this year and over</a>
+                            </h5>
+                            <div class="entry-meta meta-1 float-left font-sm">
+                                <span class="post-on">Sep 15, 2021</span>
+                                <span class="post-by has-dot">13k views</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex transition-normal latest-small-thumb">
+                        <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
+                            <a class="color-white" href="/single">
+                                <img src="/imgs/news/thumb-13.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="post-content media-body align-self-center">
+                            <h5 class="post-title mb-15 text-limit-2-row font-medium">
+                                <a href="/single">Why We Need to Stop Talking About Food and Guilt</a>
+                            </h5>
+                            <div class="entry-meta meta-1 float-left font-sm">
+                                <span class="post-on">Sep 15, 2021</span>
+                                <span class="post-by has-dot">13k views</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <section class="recent-posts pt-65 pb-30 position-relative">
+            <div class="bg-square-2"></div>
+            <div class="container">
+                <div class="header-title mb-65">
+                    <h3 class="font-heading mb-0 wow fadeIn animated">Recent Articles</h3>
+                    <span class="sub-header-title text-grey-400 wow fadeIn animated">Don't miss new trend</span>
+                </div>
+                <div class="row">
+                    <% for(var i = 0; i < news.length; i++) { %>
+                    <article class="col-lg-6 col-md-6 mb-30 wow fadeIn animated">
+                        <div class="post-card-1 large border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url('imgs/uploaded_images/<%= news[i].post_image %>')">
+                                <a class="img-link" href="/single/<%= news[i].id %>"></a>
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="post-card-content">
+                                    <div class="entry-meta meta-1 float-left font-md mb-10">
+                                        <span class="post-on has-dot"><%= news[i].post_created_date %></span>
+                                    </div>
+                                    <h4 class="post-title mb-30">
+                                        <a href="/single/<%= news[i].id %>"><%= news[i].post_title %></a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+        <div class="trending position-relative pb-65">
+            
+        </div>
+        <section class="newsletter bg-brand-3 pt-100 pb-100">
+            <div class="container">
+                <div class="position-relative">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="header-title-2 mb-65">
+                                <h4 class="mb-0 text-grey-400 wow fadeIn animated">
+                                    <img src="/imgs/theme/svg/send.svg" alt="">
+                                    <span>Subscribe</span>
+                                </h4>
+                                <h3 class="font-heading wow fadeIn animated">to Our Newsletter</h3>
+                            </div>
+                            <form class="form-subcriber mt-30 d-flex wow fadeIn animated">
+                                <input type="email" class="form-control bg-white font-small" placeholder="Enter your email">
+                                <button class="btn bg-dark text-white" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <img src="/imgs/theme/sketch-1.png" alt="" class="sketch-1 wow fadeIn animated">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End Main content -->
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
